@@ -5,7 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("What is your score out of 100 (ex. 94)? ");
-        int grade = Console.ReadLine();
+        string userInput = Console.ReadLine();
+
+        int grade = int.Parse(userInput);
 
         if (grade >= 90)
         {
