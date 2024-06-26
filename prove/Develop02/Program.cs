@@ -12,7 +12,6 @@ class Program
         displayMessage();
 
         displayOptions();
-
         
     }
 
@@ -24,20 +23,45 @@ class Program
     static void displayOptions()
     {
         List<string> options = new List<string> {"Write", "Display", "Load", "Save", "Quit"};
+        List<int> numbers = new List<int> {1, 2, 3, 4, 5};
 
-        int selection = 1;
+        int selection = -1;
 
         while (selection != 5) {
 
-            for (int i = 1; i = options; i++) {
+            foreach (string option in options)
+            {
+                Console.WriteLine($"{option}");
+            }
 
-                Console.WriteLine(i);
+            if (selection == 1) 
+            {
+                Entry entry = new Entry();
+                entry.Display();
+
+            }
+            else if (selection == 2)
+            {
+                Journal dispEntry = new Journal();
+                dispEntry.DisplayAll();
+            }
+            else if (selection == 3)
+            {
+
+            }
+            else if (selection == 4)
+            {
+                Journal save = new Journal();
+                save.SaveToFile()
             }
 
             Console.Write("Please select an option: ");
             string userInput = Console.ReadLine();
 
             selection = int.Parse(userInput);
+
         }
+        
+        Console.WriteLine("Great job writing in your journal today! See you tomorrow!");
     }
 }

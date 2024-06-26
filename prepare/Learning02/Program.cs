@@ -20,8 +20,8 @@ class Program
         Resume myResume = new Resume();
         myResume._name = "Allison Rose";
 
-        myResume.jobs.Add(job1);
-        myResume.jobs.Add(job2);
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
 
         myResume.Display();
     }
