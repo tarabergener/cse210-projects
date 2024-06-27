@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 public class Scripture
 {
-    Reference _reference = new Reference("John", 3, 19);
+    Reference _reference = new Reference("John", 3, 16);
     List<Word> _words;
 
     public Scripture(Reference _reference, string text)
