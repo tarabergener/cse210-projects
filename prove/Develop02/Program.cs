@@ -22,23 +22,26 @@ class Program
 
     static void displayOptions()
     {
-        List<string> options = new List<string> {"Write", "Display", "Load", "Save", "Quit"};
-        List<int> numbers = new List<int> {1, 2, 3, 4, 5};
 
         int selection = -1;
 
+        Console.WriteLine("Please select a number: ");
+
         while (selection != 5) {
 
-            foreach (string option in options)
-            {
-                Console.WriteLine($"{option}");
-            }
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
 
             if (selection == 1) 
             {
                 Entry entry = new Entry();
                 entry.Display();
 
+                Journal journal = new Journal();
+                journal.AddEntry(_entries);
             }
             else if (selection == 2)
             {
@@ -47,15 +50,16 @@ class Program
             }
             else if (selection == 3)
             {
-
+                Journal load = new Journal();
+                load.LoadFromFile();
             }
             else if (selection == 4)
             {
                 Journal save = new Journal();
                 save.SaveToFile()
-            }
+            };
 
-            Console.Write("Please select an option: ");
+            Console.Write("Please select a number: ");
             string userInput = Console.ReadLine();
 
             selection = int.Parse(userInput);

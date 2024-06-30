@@ -8,7 +8,8 @@ public class Word
 
     public Word(string text)
     {
-
+        _text = text;
+        Console.WriteLine("God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
     }
 
     public void Hide()
@@ -23,7 +24,7 @@ public class Word
 
     public bool IsHidden()
     {
-        return ---;
+        return ;
     }
 
     public string GetDisplayText()
