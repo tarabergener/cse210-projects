@@ -15,19 +15,9 @@ public class Reference
         Console.WriteLine($"{book} {chapter}:{verse}");
     }
 
-    public Reference(string book, int chapter, int startVerse, int endVerse)
-    {
-        _book = book;
-        _chapter = chapter;
-        _verse = startVerse;
-        _endVerse = endVerse;
-        Console.WriteLine($"{book} {chapter}:{startVerse}-{endVerse}");
-    }
-
     public string GetDisplayText()
     {
         string r1 = $"{_book} {_chapter}:{_verse}";
-        string r2 = $"{_book} {_chapter}:{_verse}-{_endVerse}";
         return r1;
     }
 }
