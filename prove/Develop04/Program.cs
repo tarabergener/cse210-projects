@@ -68,6 +68,8 @@ class Program
                 listing.GetDuration();
 
                 Console.WriteLine(listing.GetRandomPrompt());
+                Console.WriteLine("Start your list here: ");
+                listing.GetList();
 
                 Console.WriteLine(listing.DisplayEndingMessage());
                 Console.WriteLine();

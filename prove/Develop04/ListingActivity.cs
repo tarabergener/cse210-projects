@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Dynamic;
 
 public class ListingActivity : Activity
@@ -27,10 +28,18 @@ public class ListingActivity : Activity
         Console.WriteLine($"--{GetRandomPrompt()}--");
     }
 
-    //public List<string> GetListFromUser()
-    //{
-    //    
-//
-    //    return 
-    //}
+    public List<string> GetListFromUser = new List<string>();
+
+    public void GetList()
+    {
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(GetDuration());
+
+        while (DateTime.Now < futureTime)
+        {
+            Console.WriteLine();
+            string list1 = Console.ReadLine();
+            GetListFromUser.Add(list1);
+        }
+    }
 }
