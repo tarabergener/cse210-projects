@@ -1,60 +1,48 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
 using System.Runtime.CompilerServices;
 
 public class Scripture
 {
-    Reference _reference = new Reference("John", 3, 16);
-    List<Word> _words;
+    public Reference _reference = new Reference();
+    public List<Word> _words = new List<Word>();
 
-    public Scripture(Reference _reference, string text)
+    public void DisplayWords()
     {
-        text = 
+        foreach (Word w in _words)
+        {
+            string script = w._text;
+            Console.WriteLine($"{script}.");
+        }
     }
 
-    public void HideRandomWords(int numberToHide)
+    public void HideRandomWords()
     {
-
+        foreach (Word w in _words)
+        {
+            Random randomGenerator = new Random();
+            randomGenerator.Next(_words.Count);
+            string randomWord = w._text;
+            string newWord = randomWord.Replace("_", "*");
+        }
     }
 
-    public static string GetDisplayText()
+    public void DisplayNewWords()
     {
-        return ---;
+        while (IsCompletelyHidden())
+        {
+            foreach(Word w in _words)
+            {
+                string script = w._text;
+                Console.WriteLine($"{_words}");
+            }
+        }
     }
 
     public bool IsCompletelyHidden()
     {
-        return ---; 
+        return false;
     }
-}
 
-    public Scripture(Reference reference, string text)
-    {
-        Reference = reference;
-        Text = text;
-        _words = InitializeWords(text);
-        _originalWords = new List<Word>(_words); // Store a copy of original words
-    }
- 
-    private List<Word> InitializeWords(string text)
-    {
-        List<Word> words = new List<Word>();
-        string[] tokens = text.Split(" ");
-        foreach (var token in tokens)
-        {
-            words.Add(new Word(token));
-        }
-        return words;
-    }
- 
-    public List<Word> GetWords()
-    {
-        return _words;
-    }
- 
-    public void ResetWords()
-    {
-        // Reset words to original state
-        _words = new List<Word>(_originalWords);
-    }
 }

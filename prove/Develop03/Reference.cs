@@ -2,17 +2,15 @@ using System;
 
 public class Reference
 {
-    private string _book;
-    private int _chapter;
-    private int _verse;
-    private int _endVerse;
+    public string _book;
+    public int _chapter;
+    public int _verse;
 
-    public Reference(string book, int chapter, int verse)
+    public void SetDisplayText(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
         _verse = verse;
-        Console.WriteLine($"{book} {chapter}:{verse}");
     }
 
     public string GetDisplayText()
