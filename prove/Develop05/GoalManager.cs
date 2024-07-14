@@ -6,13 +6,13 @@ public class GoalManager
 
     public void Start()
     {
-
+        
     }
 
     public void DisplayPlayerInfo()
     {
 
-        //Console.WriteLine($"Your current score is {}");
+        Console.WriteLine($"Your current score is ...");
     }
 
     public void ListGoalNames()
@@ -27,12 +27,12 @@ public class GoalManager
 
     public void CreateGoal()
     {
-
+        
     }
 
     public void RecordEvent()
     {
-
+        
     }
 
     public void SaveGoals()

@@ -25,13 +25,8 @@ public class SimpleGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        if (IsComplete() == true)
-        {
-            string taskComplete = $"Great job! You completed {_shortName}!You earned {_points} points!";
-            return taskComplete;
-        } else {
-            string taskIncomplete = $"Keep up the great work! You will reach your goal soon!";
-            return taskIncomplete;
-        }
+        string goalDetails = $"[ ]{_shortName} = {_points}";
+
+        return goalDetails;
     }
 }

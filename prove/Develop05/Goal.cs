@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Reflection.Metadata.Ecma335;
 
 public abstract class Goal
@@ -11,18 +12,37 @@ public abstract class Goal
 
     public abstract bool IsComplete();
 
-    public string GetDetailsString()
+    public string GetName()
     {
-        string goalDetails = $"{_shortName}; {_description}; {_points}";
-
-        return goalDetails;
+        return _shortName;
     }
 
-    public void SetDetailsString(string shortName, string description, string points)
+    public void SetName()
     {
-        _shortName = shortName;
-        _description = description;
-        _points = points;
+        Console.WriteLine("What is the name of your goal? ");
+        _shortName = Console.ReadLine();
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public void SetDescription()
+    {
+        Console.WriteLine("What is a short description of your goal? ");
+        _description = Console.ReadLine();
+    }
+
+    public string GetPoints()
+    {
+        return _points;
+    }
+
+    public void SetPoints()
+    {
+        Console.WriteLine("How many points is this goal worth? ");
+        _points = Console.ReadLine();
     }
 
     public abstract string GetStringRepresentation();
