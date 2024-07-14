@@ -27,7 +27,14 @@ public class GoalManager
 
     public void CreateGoal()
     {
-        
+        SimpleGoal sGoal = new SimpleGoal();
+        sGoal.SetName();
+        sGoal.SetDescription();
+        sGoal.SetPoints();
+        Console.WriteLine($"[ ] {sGoal.GetName()} = {sGoal.GetPoints()}");
+        string g1 = $"{sGoal.GetName()}, {sGoal.GetDescription()}, {sGoal.GetPoints()}";
+
+
     }
 
     public void RecordEvent()

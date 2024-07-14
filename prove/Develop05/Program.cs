@@ -17,12 +17,29 @@ class Program
                     sGoal.SetName();
                     sGoal.SetDescription();
                     sGoal.SetPoints();
-                    Console.WriteLine($"[ ] {sGoal.GetName()} = {sGoal.GetPoints()}");
+                    Console.WriteLine(sGoal.GetStringRepresentation());
+                    Console.WriteLine();
                     
-                    Console.Clear();
 
                 } else if (goalPicked == 2) {
-                    
+                    ChecklistGoal cGoal = new ChecklistGoal();
+                    cGoal.SetName();
+                    cGoal.SetDescription();
+                    cGoal.SetPoints();
+                    cGoal.SetBonus();
+                    cGoal.SetTarget();
+                    Console.WriteLine(cGoal.GetStringRepresentation());
+                    Console.WriteLine();
+
+                } else if (goalPicked == 3)
+                {
+                    EternalGoal eGoal = new EternalGoal();
+                    eGoal.SetName();
+                    eGoal.SetDescription();
+                    eGoal.SetPoints();
+                    Console.WriteLine(eGoal.GetStringRepresentation());
+                    Console.WriteLine();
+
                 }
 
                 Console.WriteLine("1. Simple Goal");
@@ -32,6 +49,7 @@ class Program
                 Console.WriteLine("What kind of goal would you like to set?");
                 string selectGoal = Console.ReadLine();
                 goalPicked = int.Parse(selectGoal);
+                Console.Clear();
             }
 
             Console.WriteLine("1. Create New Goal");
@@ -45,6 +63,7 @@ class Program
             Console.WriteLine("Please select from the following options:");
             string userInput = Console.ReadLine();
             selection = int.Parse(userInput);
+            Console.Clear();
         }
     }
 }
