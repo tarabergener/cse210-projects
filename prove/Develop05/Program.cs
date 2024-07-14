@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json;
 
 class Program
 {
@@ -50,6 +51,26 @@ class Program
                 string selectGoal = Console.ReadLine();
                 goalPicked = int.Parse(selectGoal);
                 Console.Clear();
+
+            } else if (selection == 3) {
+
+                string fileName = "GoalsProject.json";
+                string jsonString = JsonSerializer.Serialize(goalPicked);
+                File.WriteAllText(fileName, jsonString);
+
+                Console.WriteLine(File.ReadAllText(fileName));
+
+            } else if (selection == 5) {
+                SimpleGoal sRecord = new SimpleGoal();
+                sRecord.RecordEvent();
+
+                ChecklistGoal cRecord = new ChecklistGoal();
+                cRecord.RecordEvent();
+
+                EternalGoal eRecord = new EternalGoal();
+                eRecord.RecordEvent();
+            } else {
+                break;
             }
 
             Console.WriteLine("1. Create New Goal");

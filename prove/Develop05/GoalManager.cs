@@ -1,4 +1,6 @@
 using System;
+using System.Net.NetworkInformation;
+using System.Text.Json;
 
 public class GoalManager
 {
@@ -12,7 +14,7 @@ public class GoalManager
     public void DisplayPlayerInfo()
     {
 
-        Console.WriteLine($"Your current score is ...");
+        Console.WriteLine($"Your current score is...");
     }
 
     public void ListGoalNames()
@@ -22,7 +24,8 @@ public class GoalManager
 
     public void ListGoalDetails()
     {
-
+        SimpleGoal simple = new SimpleGoal();
+        var g1 = simple.GetName(); simple.GetDescription(); simple.GetPoints();
     }
 
     public void CreateGoal()
@@ -37,14 +40,12 @@ public class GoalManager
 
     }
 
-    public void RecordEvent()
+    public async void SaveGoals()
     {
-        
-    }
-
-    public void SaveGoals()
-    {
-
+        string fileName = "GoalProject.json";
+        await using FileStream createStream = File.Create(fileName);
+        await JsonSerializer.SerializeAsync(createStream, _goals);
+        Console.WriteLine(File.ReadAllText(fileName));
     }
 
     public void LoadGoals()
