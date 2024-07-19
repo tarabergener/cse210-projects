@@ -6,27 +6,27 @@ class Comment
     private string _personName;
     private string _comment;
 
-    public void setName(string personName)
+    public void SetName(string personName)
     {
         _personName = personName;
     }
 
-    public string getPersonName()
+    public string GetPersonName()
     {
         return _personName;
     }
 
-    public void setComment(string comment)
+    public void SetComment(string comment)
     {
         _comment = comment;
     }
 
-    public string getComment()
+    public string GetComment()
     {
         return _comment;
     }
 
-    public void displayComments()
+    public void DisplayComments()
     {
         Console.WriteLine($"{_personName}: {_comment}");
     }

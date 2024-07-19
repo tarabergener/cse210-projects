@@ -63,7 +63,6 @@ class Program
         o1._products.Add(p1);
         o1._products.Add(p2);
         o1._products.Add(p3);
-        o1.
 
         o1.DisplayPackingLabel();
         //o1.DisplayShippingLabel();
@@ -75,7 +74,7 @@ class Program
         o2._products.Add(p6);
 
         o2.DisplayPackingLabel();
-        //o1.DisplayShippingLabel();
-        //o1.CalculateCost();
+        //o2.DisplayShippingLabel();
+        //o2.CalculateCost();
     }
 }

@@ -5,6 +5,7 @@ class Order
 {
     public List<Product> _products = new List<Product>();
     private Customer _customer;
+    private Address _address;
 
     public void CalculateCost()
     {
@@ -28,12 +29,12 @@ class Order
     //    _products.Add(product.GetProductName());
     //}
 
-    //public void ShippingLabel()
-    //{
-    //    _customer.CustomerInfo();
-    //}
+    public void ShippingLabel()
+    {
+        _customer.CustomerInfo();
+    }
 
-        public void DisplayPackingLabel()
+    public void DisplayPackingLabel()
     {
         foreach (Product product in _products)
         {

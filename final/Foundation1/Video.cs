@@ -9,32 +9,32 @@ class Video
     private string _length;
     public List<Comment> _comments = new List<Comment>();
 
-    public void setTitle(string title)
+    public void SetTitle(string title)
     {
         _title = title;
     }
 
-    public string getTitle()
+    public string GetTitle()
     {
         return _title;
     }
 
-    public void setAuthor(string author)
+    public void SetAuthor(string author)
     {
         _author = author;
     }
 
-    public string getAuthor()
+    public string GetAuthor()
     {
         return _author;
     }
 
-    public void setLength(string length)
+    public void SetLength(string length)
     {
         _length = length;
     }
 
-    public string getLength()
+    public string GetLength()
     {
         return _length;
     }
@@ -49,7 +49,7 @@ class Video
 
         foreach (Comment comment in _comments)
         {
-            comment.displayComments();
+            comment.DisplayComments();
         }
     }
 }
