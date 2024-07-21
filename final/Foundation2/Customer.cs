@@ -25,9 +25,8 @@ class Customer
         }
     }
 
-    public void CustomerInfo()
+    public string CustomerAddress()
     {
-        Console.WriteLine(GetCustomer());
-        _address.fullAddress();
+        
     }
 }

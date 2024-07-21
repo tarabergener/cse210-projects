@@ -5,7 +5,6 @@ class Order
 {
     public List<Product> _products = new List<Product>();
     private Customer _customer;
-    private Address _address;
 
     public void CalculateCost()
     {
@@ -23,15 +22,10 @@ class Order
         }
     }
 
-    //public void AddProducts()
-    //{
-    //    Product product = new Product();
-    //    _products.Add(product.GetProductName());
-    //}
-
-    public void ShippingLabel()
+    public void DisplayShippingLabel(Customer customer)
     {
-        _customer.CustomerInfo();
+        //Console.WriteLine(_customer.GetCustomer());
+
     }
 
     public void DisplayPackingLabel()

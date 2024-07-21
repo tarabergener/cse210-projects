@@ -41,13 +41,7 @@ class Program
         p6.SetPrice(18);
         p6.SetQuantity(3);
 
-        Customer c1 = new Customer();
-        c1.SetCustomer("Ralph Johnson");
-
-        Customer c2 = new Customer();
-        c2.SetCustomer("Jose Gurerra");
-
-        Address a1 = new Address();
+        Address a1 = new Address("5569 Celtic Circle", "Minneapolis", "MN", );
         a1.SetStreetAddress("5569 Celtic Circle");
         a1.SetCity("Minneapolis");
         a1.SetState("MN");
@@ -55,26 +49,46 @@ class Program
 
         Address a2 = new Address();
         a2.SetStreetAddress("2 Valenzuela Calle");
-        a2.SetCity("");
-        a2.SetState("");
+        a2.SetCity("Ignacia");
+        a2.SetState("Pollo");
         a2.SetCountry("Brazil");
+
+        Customer c1 = new Customer();
+        c1.SetCustomer("Ralph Johnson");
+        c1.CustomerAddress(a1);
+
+        Customer c2 = new Customer();
+        c2.SetCustomer("Jose Gurerra");
+        c2.CustomerAddress(a2);
 
         Order o1 = new Order();
         o1._products.Add(p1);
         o1._products.Add(p2);
         o1._products.Add(p3);
 
+        Console.WriteLine("Order 1 Packing Label");
         o1.DisplayPackingLabel();
-        //o1.DisplayShippingLabel();
-        //o1.CalculateCost();
+        Console.WriteLine("");
+        Console.WriteLine("Order 1 Shipping Label");
+        c1.GetCustomer();
+        Console.WriteLine("");
+        Console.WriteLine("Order 1 Invoice Total");
+        //Console.WriteLine(o1.CalculateCost());
+        Console.WriteLine("");
 
-        Order o2 = new Order();
-        o2._products.Add(p4);
-        o2._products.Add(p5);
-        o2._products.Add(p6);
-
-        o2.DisplayPackingLabel();
-        //o2.DisplayShippingLabel();
-        //o2.CalculateCost();
+        //Order o2 = new Order();
+        //o2._products.Add(p4);
+        //o2._products.Add(p5);
+        //o2._products.Add(p6);
+//
+        //Console.WriteLine("Order 2 Packing Label");
+        //o2.DisplayPackingLabel();
+        //Console.WriteLine("");
+        //Console.WriteLine("Order 2 Shipping Label");
+        //c2.GetCustomer();
+        //Console.WriteLine("");
+        //Console.WriteLine("Order 2 Invoice Total");
+        ////Console.WriteLine(o2.CalculateCost());
+        //Console.WriteLine("");
     }
 }
