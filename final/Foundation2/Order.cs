@@ -12,17 +12,21 @@ class Order
         {
             foreach (Product product in _products)
             {
-                Console.WriteLine(product.TotalCost() + 5);
+                int total = 0;
+                total += product.TotalCost();
+                Console.WriteLine($"Your order total is ${total + 5}");
             }
         } else {
             foreach (Product product in _products)
             {
-                Console.WriteLine(product.TotalCost() + 35);
+                int total = 0;
+                total += product.TotalCost();
+                Console.WriteLine($"Your order total is ${total + 35}");
             }
         }
     }
 
-    public void DisplayShippingLabel(Customer customer)
+    public void DisplayShippingLabel()
     {
         //Console.WriteLine(_customer.GetCustomer());
 
