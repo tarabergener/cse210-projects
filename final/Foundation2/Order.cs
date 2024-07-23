@@ -26,12 +26,6 @@ class Order
         }
     }
 
-    public void DisplayShippingLabel()
-    {
-        //Console.WriteLine(_customer.GetCustomer());
-
-    }
-
     public void DisplayPackingLabel()
     {
         foreach (Product product in _products)

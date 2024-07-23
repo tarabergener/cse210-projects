@@ -59,6 +59,12 @@ class Address
         }
     }
 
+    public void FullAddress()
+    {
+        Console.WriteLine($"{_streetAddress}");
+        Console.WriteLine($"{_city}, {_state}, {_country}");
+    }
+
     //public Address(string streetAddress, string city, string state, string country)
     //{
     //    _streetAddress = streetAddress;
