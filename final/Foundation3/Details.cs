@@ -15,7 +15,7 @@ public class Details
     public void FullOutdoorDetials()
     {
         OutdoorGatherings outdoor = new OutdoorGatherings();
-        Console.WriteLine($"{outdoor.DisplayOutdoorInfo}");
+        Console.WriteLine($"{outdoor.DisplayOutdoorInfo}"); 
     }
 
     public void FullLectureDetails()

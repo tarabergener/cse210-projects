@@ -22,4 +22,11 @@ public class Receptions : Event
         Console.WriteLine($"Location: {GetEventAddress()}");
         Console.WriteLine($"RSVP Guests: {_rsvp}");
     }
+
+    public void ShortReceptionDescription()
+    {
+        Console.WriteLine("Category: Reception");
+        Console.WriteLine($"Event: {GetEventTitle()}");
+        Console.WriteLine($"Date: {GetEventDate()}");
+    }
 }

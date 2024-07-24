@@ -22,4 +22,11 @@ public class OutdoorGatherings : Event
         Console.WriteLine($"Location: {GetEventAddress()}");
         Console.WriteLine($"Weather: {_weather}");
     }
+
+    public void ShortOutdoorDescription()
+    {
+        Console.WriteLine("Category: Outdoor Gathering");
+        Console.WriteLine($"Event: {GetEventTitle()}");
+        Console.WriteLine($"Date: {GetEventDate()}");
+    }
 }

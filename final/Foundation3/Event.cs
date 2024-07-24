@@ -68,5 +68,4 @@ public class Event
         Console.WriteLine($"Date: {_eventDate}  Time: {_eventTime}");
         Console.WriteLine($"Location: {GetEventAddress()}");
     }
-
 }

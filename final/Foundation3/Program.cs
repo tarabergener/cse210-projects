@@ -19,8 +19,8 @@ class Program
         Console.WriteLine("Event Full Details");
         r1.DisplayReceptionInfo();
         Console.WriteLine("");
-        Details d1 = Details
         Console.WriteLine("Event Short Details");
+        r1.ShortReceptionDescription();
         Console.WriteLine("");
         Console.WriteLine("");
 
@@ -41,6 +41,7 @@ class Program
         l2.DisplayLectureInfo();
         Console.WriteLine("");
         Console.WriteLine("Event Short Details");
+        l2.ShortLectureDescription();
         Console.WriteLine("");
         Console.WriteLine("");
 
@@ -60,6 +61,7 @@ class Program
         o3.DisplayOutdoorInfo();
         Console.WriteLine("");
         Console.WriteLine("Event Short Details");
+        o3.ShortOutdoorDescription();
         Console.WriteLine("");
         Console.WriteLine("");
 

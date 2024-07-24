@@ -34,4 +34,11 @@ public class Lectures : Event
         Console.WriteLine($"Speaker: {_speaker}");
         Console.WriteLine($"Max Guest Capacity: {_capacity}");
     }
+
+    public void ShortLectureDescription()
+    {
+        Console.WriteLine("Category: Lecture");
+        Console.WriteLine($"Event: {GetEventTitle()}");
+        Console.WriteLine($"Date: {GetEventDate()}");
+    }
 }
