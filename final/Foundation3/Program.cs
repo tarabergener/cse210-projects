@@ -13,9 +13,15 @@ class Program
         r1.SetEventTime("5:00pm");
         r1.SetRsvp(150);
         r1.SetEventAddress(a1);
+        Console.WriteLine("Event Standard Details");
         r1.GetEventInfo();
         Console.WriteLine("");
+        Console.WriteLine("Event Full Details");
         r1.DisplayReceptionInfo();
+        Console.WriteLine("");
+        Details d1 = Details
+        Console.WriteLine("Event Short Details");
+        Console.WriteLine("");
         Console.WriteLine("");
 
         Address a2 = new Address("658658 Haddly Circle", "Hamsberry", "Minnesota", "United States");
@@ -28,9 +34,14 @@ class Program
         l2.SetEventDate("October 24, 2024");
         l2.SetEventTime("7:00am");
         l2.SetEventAddress(a2);
+        Console.WriteLine("Event Standard Details");
         l2.GetEventInfo();
         Console.WriteLine("");
+        Console.WriteLine("Event Full Details");
         l2.DisplayLectureInfo();
+        Console.WriteLine("");
+        Console.WriteLine("Event Short Details");
+        Console.WriteLine("");
         Console.WriteLine("");
 
         Address a3 = new Address("15, rue Pierre Charron", "75008", "Paris", "France");
@@ -41,7 +52,15 @@ class Program
         o3.SetEventDate("November 8, 2025");
         o3.SetEventTime("12:00pm");
         o3.SetEventAddress(a3);
+        o3.SetWeather("Overcast");
+        Console.WriteLine("Event Standard Details");
         o3.GetEventInfo();
+        Console.WriteLine("");
+        Console.WriteLine("Event Full Details");
+        o3.DisplayOutdoorInfo();
+        Console.WriteLine("");
+        Console.WriteLine("Event Short Details");
+        Console.WriteLine("");
         Console.WriteLine("");
 
     }

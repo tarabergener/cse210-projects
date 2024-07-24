@@ -16,10 +16,10 @@ public class OutdoorGatherings : Event
     
     public void DisplayOutdoorInfo()
     {
-        Console.WriteLine($"Event: {GetEventTitle}");
-        Console.WriteLine($"Description: {GetEventDescription}.");
-        Console.WriteLine($"Date: {GetEventDate}  Time: {GetEventTime}");
-        Console.WriteLine($"Location: {GetEventAddress}");
+        Console.WriteLine($"Event: {GetEventTitle()}");
+        Console.WriteLine($"Description: {GetEventDescription()}.");
+        Console.WriteLine($"Date: {GetEventDate()}  Time: {GetEventTime()}");
+        Console.WriteLine($"Location: {GetEventAddress()}");
         Console.WriteLine($"Weather: {_weather}");
     }
 }

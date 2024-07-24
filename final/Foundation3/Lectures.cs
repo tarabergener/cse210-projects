@@ -27,11 +27,11 @@ public class Lectures : Event
 
     public void DisplayLectureInfo()
     {
-        Console.WriteLine($"Event: {GetEventTitle}");
-        Console.WriteLine($"Description: {GetEventDescription}.");
-        Console.WriteLine($"Date: {GetEventDate}  Time: {GetEventTime}");
-        Console.WriteLine($"Location: {GetEventAddress}");
+        Console.WriteLine($"Event: {GetEventTitle()}");
+        Console.WriteLine($"Description: {GetEventDescription()}.");
+        Console.WriteLine($"Date: {GetEventDate()}  Time: {GetEventTime()}");
+        Console.WriteLine($"Location: {GetEventAddress()}");
         Console.WriteLine($"Speaker: {_speaker}");
-        Console.WriteLine($"Capacity: {_capacity}");
+        Console.WriteLine($"Max Guest Capacity: {_capacity}");
     }
 }
