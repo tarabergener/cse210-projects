@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Dynamic;
 
-class Address
+public class Address
 {
     private string _streetAddress;
     private string _city;

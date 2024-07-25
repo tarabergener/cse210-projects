@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Dynamic;
 
-class Product
+public class Product
 {
     private string _productName;
     private string _productId;

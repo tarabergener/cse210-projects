@@ -69,8 +69,6 @@ class Program
 
                 EternalGoal eRecord = new EternalGoal();
                 eRecord.RecordEvent();
-            } else {
-                break;
             }
 
             Console.WriteLine("1. Create New Goal");

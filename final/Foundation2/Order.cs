@@ -1,7 +1,7 @@
 using System;
 using System.Dynamic;
 
-class Order
+public class Order
 {
     public List<Product> _products = new List<Product>();
     private Customer _customer;

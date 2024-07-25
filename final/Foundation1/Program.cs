@@ -29,6 +29,7 @@ class Program
         video1.Display();
         int _vid1Comments = video1._comments.Count;
         Console.WriteLine($"Number of comments: {_vid1Comments}");
+        Console.WriteLine("----------------------------------------------------------------------------");
         Console.WriteLine();
 
         //------- Video 2 Information --------//
@@ -61,8 +62,8 @@ class Program
         video2.Display();
         int _vid2Comments = video2._comments.Count;
         Console.WriteLine($"Number of comments: {_vid2Comments}");
+        Console.WriteLine("----------------------------------------------------------------------------");
         Console.WriteLine();
-
 
         //------- Video 3 Information --------//
         Comment comm8 = new Comment();
